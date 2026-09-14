@@ -1,0 +1,42 @@
+Link:http://iwi.econ.uni-hamburg.de/cm
+
+Data Format:
+
+Each instance file has the following format:
+- row 1: number_of_stacks (m)      number_of_blocks (n)
+- each row from 2 to n+1: total number of blocks on the stack (h) and list of blocks from bottom to top
+
+Example: Consider instance "data3-3-1.dat". The input bay is the following:
+--------------
+3 9
+3 3 7 1
+3 2 6 5
+3 8 9 4
+--------------
+
+Tier(H)|
+       |  ___ ___ ___
+  H    | |___|___|___|
+  H-1  | |___|___|___|
+  3    | |_1_|_5_|_4_|
+  2    | |_7_|_6_|_9_|
+  1    | |_3_|_2_|_8_|
+       |_________________
+           1   2    3      Stack
+
+
+Tiers "H" and "H-1" are empty tiers that are used to relocate blocks during the retrieval operation.
+Throughout the computational experiment we kept the buffer area fixed to "H,H-1", i.e., two empty tiers are used to relocate blocks.
+
+
+- Defining the parameters of the BRPAS:
+a= Acceptable shift of container pickup appointment time window. (a=Delta in BRPAS formulation).
+b= Maximum Queue length at bay (b=L in BRPAS formulation)
+T= Number of time windows.
+C= Number of stacks.
+H= Maximum Height of bay.
+N= Number of containers in the bay initial configuration.
+G= Maximum number of containers moves (retrievals and relocations) per time window.
+p= preferred pickup time of containers in the bay (array).
+I = initial bay configuration (array).
+

@@ -1,0 +1,6 @@
+- Three bay sizes are selected from the original data set of Caserta et al. (2012).
+- The first 15 instances from each bay data subset are solved.
+- Parameter delta in insyially assumed to equal to 1. 
+
+Reference:
+Caserta, M., Schwarze, S., & Voß, S. (2012). A mathematical formulation and complexity considerations for the blocks relocation problem. European Journal of Operational Research, 219(1), 96–104. https://doi.org/10.1016/j.ejor.2011.12.039
